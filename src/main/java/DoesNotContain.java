@@ -15,6 +15,27 @@ public class DoesNotContain {
      * @return true if arr does not contain target. false otherwise.
      */
     public boolean arrayDoesNotContain(int[] arr, int target){
-        return false;
-    }
-}
+        
+        for (int value : arr) {
+              
+                   if (value == target) {
+                      
+                       return false;
+                   }
+               }
+              
+               return true;
+           }
+       
+          
+           public static void main(String[] args) {
+               DoesNotContain doesNotContain = new DoesNotContain();
+               
+               int[] exampleArray = {1, 2, 3, 4, 5};
+               int targetValue = 6;
+       
+               boolean result = doesNotContain.arrayDoesNotContain(exampleArray, targetValue);
+       
+               System.out.println("Array does not contain " + targetValue + ": " + result);
+           }
+       }
